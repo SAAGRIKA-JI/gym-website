@@ -1,243 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing | Dipansh Fitness</title>
-
-<style>
-
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: system-ui, sans-serif;
-}
-
-body{
-    background:#000;
-    color:#fff;
-}
-
-/* HEADER */
-header{
-    position: fixed;
-    width:100%;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:2rem 8%;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-}
-
-.logo{
-    font-size:2.5rem;
-    font-weight:800;
-}
-
-span{
-    color:#e4764a;
-}
-
-.navbar{
-    display:flex;
-    gap:3rem;
-    list-style:none;
-}
-
-.navbar a{
-    color:#fff;
-    text-decoration:none;
-    font-size:1.6rem;
-}
-
-.navbar a.active{
-    color:#e4764a;
-}
-
-.nav-btn{
-    border:2px solid #e4764a;
-    padding:0.8rem 2rem;
-    border-radius:10px;
-    color:#e4764a;
-    text-decoration:none;
-}
-
-.nav-btn:hover{
-    background:#e4764a;
-    color:#000;
-}
-
-/* SECTION */
-.pricing{
-    padding:10rem 8% 5rem;
-    text-align:center;
-}
-
-.heading{
-    font-size:4rem;
-}
-
-.sub{
-    color:#aaa;
-    margin-top:1rem;
-    font-size:1.6rem;
-}
-
-/* CARDS */
-.pricing-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:3rem;
-    margin-top:5rem;
-}
-
-.card{
-    background:#111;
-    padding:3rem;
-    border-radius:20px;
-    transition:0.4s;
-    position:relative;
-    overflow:hidden;
-}
-
-.card:hover{
-    transform:translateY(-10px) scale(1.03);
-    box-shadow:0 0 20px #e4764a;
-}
-
-/* HIGHLIGHT CARD */
-.card.popular{
-    border:2px solid #e4764a;
-    box-shadow:0 0 25px #e4764a;
-}
-
-.badge{
-    position:absolute;
-    top:15px;
-    right:-40px;
-    background:#e4764a;
-    padding:5px 50px;
-    transform:rotate(45deg);
-    font-size:1.2rem;
-}
-
-/* TEXT */
-.card h3{
-    font-size:2.5rem;
-}
-
-.price{
-    font-size:3.5rem;
-    margin:1rem 0;
-    color:#e4764a;
-}
-
-.card ul{
-    list-style:none;
-    margin:2rem 0;
-}
-
-.card ul li{
-    margin:0.8rem 0;
-    font-size:1.5rem;
-    color:#ccc;
-}
-
-/* BUTTON */
-.btn{
-    display:inline-block;
-    padding:1rem 2rem;
-    border-radius:10px;
-    background:#e4764a;
-    color:#000;
-    text-decoration:none;
-    font-weight:600;
-}
-
-.btn:hover{
-    box-shadow:0 0 15px #e4764a;
-}
-
-</style>
+<title>Pricing</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo">Dipansh <span>Fitness</span></div>
+<header> SAME HEADER </header>
 
-    <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Services.html">Services</a></li>
-        <li><a href="About.html">About Us</a></li>
-        <li><a href="Pricing.html" class="active">Pricing</a></li>
-        <li><a href="Review.html">Review</a></li>
-    </ul>
+<section class="hero">
+<div class="hero-text">
+<h1>PRICING PLANS</h1>
+<p>Choose your plan and start today.</p>
+</div>
 
-    <a href="#" class="nav-btn">Join Us</a>
-</header>
+<div class="hero-img">
+<img src="images/7.jpg">
+</div>
+</section>
 
-<section class="pricing">
+<section>
 
-    <h2 class="heading">Our <span>Plans</span></h2>
-    <p class="sub">Choose the plan that fits your fitness journey 💪</p>
+<div class="grid">
 
-    <div class="pricing-container">
+<div class="card">
+<h2>Basic</h2>
+<h1>₹999</h1>
+<p>Gym Access</p>
+<p>Cardio</p>
+<p>Locker</p>
+<a class="btn">Join</a>
+</div>
 
-        <!-- BASIC -->
-        <div class="card">
-            <h3>Basic</h3>
-            <div class="price">₹999/mo</div>
+<div class="card">
+<h2>Pro</h2>
+<h1>₹1999</h1>
+<p>Trainer</p>
+<p>Diet Plan</p>
+<p>All Equipment</p>
+<a class="btn">Join</a>
+</div>
 
-            <ul>
-                <li>✔ Gym Access</li>
-                <li>✔ Basic Workout Plan</li>
-                <li>✔ Locker Facility</li>
-                <li>❌ Personal Trainer</li>
-            </ul>
+<div class="card">
+<h2>Premium</h2>
+<h1>₹3499</h1>
+<p>All Services</p>
+<p>Personal Coach</p>
+<p>Priority Support</p>
+<a class="btn">Join</a>
+</div>
 
-            <a href="#" class="btn">Join Now</a>
-        </div>
-
-        <!-- PRO -->
-        <div class="card popular">
-            <div class="badge">POPULAR</div>
-
-            <h3>Pro</h3>
-            <div class="price">₹1999/mo</div>
-
-            <ul>
-                <li>✔ Full Gym Access</li>
-                <li>✔ Advanced Workout Plan</li>
-                <li>✔ Diet Plan</li>
-                <li>✔ Trainer Support</li>
-            </ul>
-
-            <a href="#" class="btn">Join Now</a>
-        </div>
-
-        <!-- PREMIUM -->
-        <div class="card">
-            <h3>Premium</h3>
-            <div class="price">₹3499/mo</div>
-
-            <ul>
-                <li>✔ Everything in Pro</li>
-                <li>✔ Personal Trainer</li>
-                <li>✔ 1-on-1 Coaching</li>
-                <li>✔ Transformation Plan</li>
-            </ul>
-
-            <a href="#" class="btn">Join Now</a>
-        </div>
-
-    </div>
+</div>
 
 </section>
+
+<a href="tel:+919876543210" class="call-btn">📞</a>
+<script src="script.js"></script>
 
 </body>
 </html>
