@@ -1,216 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reviews | Dipansh Fitness</title>
-
-<style>
-
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: system-ui, sans-serif;
-}
-
-body{
-    background:#000;
-    color:#fff;
-}
-
-/* HEADER */
-header{
-    position: fixed;
-    width:100%;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:2rem 8%;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-}
-
-.logo{
-    font-size:2.5rem;
-    font-weight:800;
-}
-
-span{
-    color:#e4764a;
-}
-
-.navbar{
-    display:flex;
-    gap:3rem;
-    list-style:none;
-}
-
-.navbar a{
-    color:#fff;
-    text-decoration:none;
-    font-size:1.6rem;
-}
-
-.navbar a.active{
-    color:#e4764a;
-}
-
-.nav-btn{
-    border:2px solid #e4764a;
-    padding:0.8rem 2rem;
-    border-radius:10px;
-    color:#e4764a;
-    text-decoration:none;
-}
-
-.nav-btn:hover{
-    background:#e4764a;
-    color:#000;
-}
-
-/* SECTION */
-.review{
-    padding:10rem 8% 5rem;
-    text-align:center;
-}
-
-.heading{
-    font-size:4rem;
-}
-
-.sub{
-    margin-top:1rem;
-    color:#aaa;
-    font-size:1.6rem;
-}
-
-/* REVIEW CARDS */
-.review-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:3rem;
-    margin-top:5rem;
-}
-
-.review-box{
-    background:#111;
-    padding:2.5rem;
-    border-radius:20px;
-    transition:0.4s;
-}
-
-.review-box:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 20px #e4764a;
-}
-
-/* USER */
-.user{
-    display:flex;
-    align-items:center;
-    gap:1rem;
-    margin-bottom:1.5rem;
-}
-
-.user img{
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    border:2px solid #e4764a;
-}
-
-.user h3{
-    font-size:1.8rem;
-}
-
-/* STARS */
-.stars{
-    color:#e4764a;
-    margin:1rem 0;
-    font-size:1.4rem;
-}
-
-/* TEXT */
-.review-box p{
-    font-size:1.5rem;
-    color:#ccc;
-    line-height:1.5;
-}
-
-</style>
+<title>Reviews</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo">Dipansh <span>Fitness</span></div>
+<header> SAME HEADER </header>
 
-    <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="review.html" class="active">Review</a></li>
-    </ul>
+<section class="hero">
+<div class="hero-text">
+<h1>CLIENT REVIEWS</h1>
+<p>Real feedback from our members.</p>
+</div>
+</section>
 
-    <a href="#" class="nav-btn">Join Us</a>
-</header>
+<section>
 
-<section class="review">
+<div class="grid">
 
-    <h2 class="heading">Client <span>Reviews</span></h2>
-    <p class="sub">What our members say about us 💪</p>
+<div class="card">
+<p>⭐ One of the best gyms I have ever joined.</p>
+</div>
 
-    <div class="review-container">
+<div class="card">
+<p>⭐ Trainers are very motivating and helpful.</p>
+</div>
 
-        <!-- REVIEW 1 -->
-        <div class="review-box">
-            <div class="user">
-                <img src="1.jpeg">
-                <h3>Chetanya</h3>
-            </div>
+<div class="card">
+<p>⭐ Amazing atmosphere and top equipment.</p>
+</div>
 
-            <div class="stars">★★★★★</div>
+<div class="card">
+<p>⭐ Helped me lose 10kg in 3 months.</p>
+</div>
 
-            <p>
-                Best gym I’ve ever joined! Trainers are super supportive and the environment keeps me motivated daily.
-            </p>
-        </div>
-
-        <!-- REVIEW 2 -->
-        <div class="review-box">
-            <div class="user">
-                <img src="1.jpeg">
-                <h3>Saagrika</h3>
-            </div>
-
-            <div class="stars">★★★★★</div>
-
-            <p>
-                Lost 8kg in 3 months! The diet and workout plans are perfect. Highly recommend Dipansh Fitness.
-            </p>
-        </div>
-
-        <!-- REVIEW 3 -->
-        <div class="review-box">
-            <div class="user">
-                <img src="1.jpeg">
-                <h3>Dhruv</h3>
-            </div>
-
-            <div class="stars">★★★★☆</div>
-
-            <p>
-                Amazing equipment and vibe. Only thing is it gets a bit crowded in evenings, but overall great experience.
-            </p>
-        </div>
-
-    </div>
+</div>
 
 </section>
+
+<a href="tel:+919876543210" class="call-btn">📞</a>
+<script src="script.js"></script>
 
 </body>
 </html>
