@@ -1,62 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Pricing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reviews | Dipansh Fitness</title>
+
+<!-- MAIN CSS -->
 <link rel="stylesheet" href="style.css">
+
+<!-- ICONS -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+
+/* ONLY REVIEW PAGE STYLES */
+
+.review-page{
+    padding: 12rem 8% 5rem; /* fixes header overlap */
+}
+
+.review-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap:3rem;
+    margin-top:5rem;
+}
+
+.review-card{
+    background:#111;
+    padding:2.5rem;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.review-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 20px #e4764a;
+}
+
+.review-card img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    margin-bottom:1rem;
+}
+
+.review-card h2{
+    font-size:2rem;
+    margin-bottom:0.5rem;
+}
+
+.rating{
+    color:#e4764a;
+    margin-bottom:1rem;
+}
+
+.review-card p{
+    font-size:1.4rem;
+    color:#ccc;
+    line-height:1.6;
+}
+
+</style>
 </head>
 
 <body>
 
-<header> SAME HEADER </header>
+<!-- SAME HEADER -->
+<header>
+    <a href="index.html" class="logo">Dipansh <span>Fitness</span></a>
 
-<section class="hero">
-<div class="hero-text">
-<h1>PRICING PLANS</h1>
-<p>Choose your plan and start today.</p>
-</div>
+    <div class="bx bx-menu" id="menu-icon"></div>
 
-<div class="hero-img">
-<img src="images/7.jpg">
-</div>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Pricing.html">Pricing</a></li>
+        <li><a href="Review.html" class="active">Review</a></li>
+    </ul>
+
+    <div class="top-btn">
+        <a href="login.html" class="nav-btn">Join Us</a>
+    </div>
+</header>
+
+<!-- REVIEW SECTION -->
+<section class="review-page">
+
+    <h2 class="heading">Client <span>Reviews</span></h2>
+
+    <div class="review-container">
+
+        <!-- REVIEW 1 -->
+        <div class="review-card">
+            <img src="r1.jpg" alt="">
+            <h2>Dev</h2>
+
+            <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+            </div>
+
+            <p>
+                This gym provides a great environment for fitness and self-improvement. 
+                The trainers are friendly, experienced, and always ready to help. 
+                The equipment is modern and well-maintained, making workouts smooth and effective. 
+                The atmosphere keeps you motivated and consistent. I’ve seen real progress 
+                in my strength and stamina. Overall, it’s a perfect place to achieve your fitness goals.
+            </p>
+        </div>
+
+        <!-- REVIEW 2 -->
+        <div class="review-card">
+            <img src="r3.jpg">
+            <h2>Ashi</h2>
+
+            <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+            </div>
+
+            <p>
+                Joining this gym has been one of my best decisions.
+                The trainers guide you properly and ensure correct
+                form during workouts. The space is clean, organized,
+                and has all the necessary equipment. The positive 
+                vibe pushes you to give your best every day. I feel
+                more confident and energetic now. Highly recommended 
+                for anyone serious about fitness.
+        </div>
+
+        <!-- REVIEW 3 -->
+        <div class="review-card">
+            <img src="r2.jpg" alt="">
+            <h2>Dhruv</h2>
+
+            <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+            </div>
+
+            <p>
+                This gym stands out because of its supportive and motivating environment. 
+                The trainers are knowledgeable and help you stay on track with your goals. 
+                The workout plans are well-structured and effective. The equipment quality 
+                is excellent and easy to use. It’s a great place for both beginners and 
+                experienced people. Definitely worth joining.
+            </p>
+        </div>
+
+    </div>
+
 </section>
-
-<section>
-
-<div class="grid">
-
-<div class="card">
-<h2>Basic</h2>
-<h1>₹999</h1>
-<p>Gym Access</p>
-<p>Cardio</p>
-<p>Locker</p>
-<a class="btn">Join</a>
-</div>
-
-<div class="card">
-<h2>Pro</h2>
-<h1>₹1999</h1>
-<p>Trainer</p>
-<p>Diet Plan</p>
-<p>All Equipment</p>
-<a class="btn">Join</a>
-</div>
-
-<div class="card">
-<h2>Premium</h2>
-<h1>₹3499</h1>
-<p>All Services</p>
-<p>Personal Coach</p>
-<p>Priority Support</p>
-<a class="btn">Join</a>
-</div>
-
-</div>
-
-</section>
-
-<a href="tel:+919876543210" class="call-btn">📞</a>
-<script src="script.js"></script>
 
 </body>
 </html>
