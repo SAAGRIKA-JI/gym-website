@@ -1,41 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | Dipansh Fitness</title>
+
 <link rel="stylesheet" href="style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+
+.auth{
+    padding: 12rem 8% 5rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box{
+    background:#111;
+    padding:3rem;
+    border-radius:20px;
+    width:100%;
+    max-width:400px;
+}
+
+.box h2{
+    text-align:center;
+    margin-bottom:2rem;
+}
+
+.input-box{
+    margin-bottom:1.5rem;
+}
+
+.input-box input{
+    width:100%;
+    padding:1rem;
+    border-radius:10px;
+    border:none;
+    background:#222;
+    color:#fff;
+}
+
+.btn{
+    width:100%;
+    padding:1rem;
+    background:#e4764a;
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.switch{
+    text-align:center;
+    margin-top:1rem;
+    cursor:pointer;
+    color:#e4764a;
+}
+
+.message{
+    text-align:center;
+    margin-top:1rem;
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="login">
-<form onsubmit="login(event)">
+<header>
+    <a href="index.html" class="logo">Dipansh <span>Fitness</span></a>
+</header>
 
-<h2>Login</h2>
+<section class="auth">
 
-<input type="text" id="user" placeholder="Username">
-<input type="password" id="pass" placeholder="Password">
+    <div class="box">
 
-<button class="btn">Login</button>
-<p id="msg"></p>
+        <!-- LOGIN -->
+        <div id="loginBox">
+            <h2>Login</h2>
 
-</form>
-</div>
+            <div class="input-box">
+                <input type="email" id="loginEmail" placeholder="Email">
+            </div>
 
+            <div class="input-box">
+                <input type="password" id="loginPassword" placeholder="Password">
+            </div>
+
+            <button class="btn" onclick="login()">Login</button>
+
+            <p class="switch" onclick="showRegister()">Don't have account? Register</p>
+        </div>
+
+        <!-- REGISTER -->
+        <div id="registerBox" style="display:none;">
+            <h2>Register</h2>
+
+            <div class="input-box">
+                <input type="text" id="regName" placeholder="Full Name">
+            </div>
+
+            <div class="input-box">
+                <input type="email" id="regEmail" placeholder="Email">
+            </div>
+
+            <div class="input-box">
+                <input type="password" id="regPassword" placeholder="Password">
+            </div>
+
+            <button class="btn" onclick="register()">Register</button>
+
+            <p class="switch" onclick="showLogin()">Already have account? Login</p>
+        </div>
+
+        <p class="message" id="msg"></p>
+
+    </div>
+
+</section>
 <script>
-function login(e){
-e.preventDefault();
 
-let u=document.getElementById("user").value;
-let p=document.getElementById("pass").value;
+const msg = document.getElementById("msg");
 
-if(u==="admin" && p==="1234"){
-localStorage.setItem("loggedIn","true");
-window.location="index.html";
-}else{
-document.getElementById("msg").innerText="Wrong credentials";
+function showRegister(){
+    document.getElementById("loginBox").style.display="none";
+    document.getElementById("registerBox").style.display="block";
 }
+
+function showLogin(){
+    document.getElementById("registerBox").style.display="none";
+    document.getElementById("loginBox").style.display="block";
 }
+
+// REGISTER
+function register(){
+    const name = document.getElementById("regName").value.trim();
+    const email = document.getElementById("regEmail").value.trim();
+    const pass = document.getElementById("regPassword").value.trim();
+
+    if(!name || !email || !pass){
+        msg.innerText="Fill all fields!";
+        msg.style.color="red";
+        return;
+    }
+
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPass", pass);
+
+    msg.innerText="Registered Successfully!";
+    msg.style.color="lightgreen";
+
+    showLogin();
+}
+
+// LOGIN
+function login(){
+    const email = document.getElementById("loginEmail").value.trim();
+    const pass = document.getElementById("loginPassword").value.trim();
+
+    const savedEmail = localStorage.getItem("userEmail");
+    const savedPass = localStorage.getItem("userPass");
+
+    if(email === savedEmail && pass === savedPass){
+        msg.innerText="Login Successful!";
+        msg.style.color="lightgreen";
+
+        setTimeout(()=>{
+            window.location.href="index.html";
+        },1000);
+
+    } else {
+        msg.innerText="Invalid credentials!";
+        msg.style.color="red";
+    }
+}
+
 </script>
-
 </body>
 </html>
